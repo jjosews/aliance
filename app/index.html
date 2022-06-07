@@ -44,7 +44,7 @@
         <div class="menu">
           <ul class="menu__list">
             <li class="menu__list-item">
-              <a class="menu__list-link" href="#">О компании</a>
+              <a class="menu__list-link" href="about.html">О компании</a>
             </li>
             <li class="dropdown">
               <button class="dropbtn">Контрактное производство</button>
@@ -522,22 +522,24 @@
               даже в самых сложных случаях!
             </p>
             <form class="offer__form" action="#">
-              <div class="form-floating">
-                <input class="form-control" type="text" id="floatingInput" placeholder="Имя">
-                <label>Имя</label>
+              <div class="offer__form-box">
+                <div class="form-floating">
+                  <input class="form-control" type="text" id="floatingInput" placeholder="Имя" required>
+                  <label>Имя</label>
+                </div>
+                <div class="form-floating">
+                  <input class="form-control offer__form-tel" type="tel" id="center_ok" placeholder="Номер телефона" required>
+                  <label>Номер телефона</label>
+                </div>
               </div>
-              <div class="form-floating">
-                <input class="form-control offer__form-tel" type="tel" id="center_ok" placeholder="Номер телефона">
-                <label>Номер телефона</label>
+              <div class="offer__box">
+                <button class="offer__box-btn" type="submit">Отправить заявку</button>
+                <p class="offer__box-descr">
+                  Обращаясь к нам вы получаете не только профессиональную работу, но и абсолютную конфиденциальность
+                  информации!
+                </p>
               </div>
             </form>
-            <div class="offer__box">
-              <button class="offer__box-btn">Отправить заявку</button>
-              <p class="offer__box-descr">
-                Обращаясь к нам вы получаете не только профессиональную работу, но и абсолютную конфиденциальность
-                информации!
-              </p>
-            </div>
           </div>
         </div>
       </div>

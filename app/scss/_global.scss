@@ -25,3 +25,42 @@ body {
   padding: 0 15px;
   margin: 0 auto;
 }
+
+.breadcrumbs{
+  display: flex;
+  justify-content: flex-start;
+  &__item{
+    position: relative;
+    &::after{
+      content: '';
+      position: absolute;
+      width: 13px;
+      height: 1px;
+      top: 14px;
+      right: -24px;
+      background-color: #828A99;
+      &:last-child{
+        display: none;
+      }
+    }
+    & + .breadcrumbs__item{
+    margin-left: 35px;
+    }
+    &:last-child{
+      &::after{
+        display: none;
+      }
+      .breadcrumbs__item-link{
+        color: $text;
+      }
+    }
+  }
+  &__item-link{
+    font-size: 14px;
+    line-height: 22px;
+    color: #828A99;
+    &:hover{
+      color: #828A99;
+    }
+  }
+}

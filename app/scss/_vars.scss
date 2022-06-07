@@ -39,6 +39,25 @@ $text: #292D33;
   }
 }
 
+%top-title{
+  @extend %bebas-400;
+  font-size: 80px;
+  line-height: 96px;
+  color: $text;
+  padding-top: 30px;
+  text-transform: uppercase;
+  position: relative;
+  &::before{
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 2px;
+    top: 0;
+    left: 0;
+    background-color: #5C8EE6;
+  }
+}
+
 %btn{
   @extend %notosans-600;
     color: #5C8EE5;

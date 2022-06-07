@@ -212,6 +212,7 @@
     transition: all .3s;
     &:hover{
       background-color: #3A71D1;
+      color: #fff;
     }
   }
   &__items{
@@ -335,6 +336,9 @@
     line-height: 30px;
     color: $text;
     border-bottom: 2px solid $text;
+    &:hover{
+      color: $text;
+    }
   }
   &__address{
     font-style: normal;
@@ -362,6 +366,9 @@
       top: 0;
       left: 0;
       background-image: url('../images/icons/mail.svg');
+    }
+    &:hover{
+      color: $text;
     }
   }
   &__boxlink{
@@ -409,6 +416,9 @@
     color: #828A99;
     line-height: 26px;
     margin-bottom: 15px;
+    &:hover{
+      color: #828A99;
+    }
     &:last-child{
       margin-bottom: 0;
     }
@@ -419,6 +429,9 @@
     color: $text;
     line-height: 26px;
     margin-bottom: 30px;
+    &:hover{
+      color: $text;
+    }
     &:last-child{
       margin-bottom: 0;
     }
@@ -440,7 +453,8 @@
   &__politics{
     color: #828A99;
     &:hover{
-      text-decoration: underline
+      text-decoration: underline;
+      color: #828A99;
     }
   }
   &__info{
@@ -709,8 +723,12 @@
     padding: 50px;
     color: #fff;
     &:hover{
+      .blog-slider__item-title{
+        color: #fff;
+      }
       .blog-slider__item-text{
         margin-bottom: 30px;
+        color: #fff;
       }
     }
   }
@@ -805,15 +823,15 @@
     max-width: 640px;
     margin-bottom: 40px;
   }
-  &__form{
+  &__form-box{
     display: flex;
     justify-content: space-between;
     column-gap: 30px;
-    margin-bottom: 30px;
   }
   &__box{
     display: flex;
     align-items: center;
+    margin-top: 30px;
   }
   &__box-btn{
     @extend %notosans-700;
@@ -824,6 +842,10 @@
     background-color: #5C8EE5;
     border: none;
     margin-right: 30px;
+    transition: all .3s;
+    &:hover{
+      background-color: #3A71D1;
+    }
   }
   &__box-descr{
     max-width: 403px;
@@ -885,6 +907,139 @@
   &:focus{
     box-shadow: none;
     background-color: transparent;
+  }
+}
+
+.top{
+  background-color: #F0F2F5;
+  padding: 50px 0;
+  margin-top: -1px;
+  &__title{
+    display: block;
+    @extend %top-title;
+    margin-bottom: 20px;
+  }
+}
+
+.about-production{
+  margin: 100px 0;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__info{
+    max-width: 840px;
+  }
+  &__info-title{
+    @extend %title;
+    margin-bottom: 20px;
+    max-width: 600px;
+  }
+  &__info-text{
+    color: #828A99;
+  }
+}
+
+.about-iccons{
+  margin-bottom: 150px;
+  .header-content__items{
+    border: 1px solid #EBEBF0;
+  }
+  .header-content__item +.header-content__item{
+    border-left: 1px solid #EBEBF0;
+  }
+}
+
+.about-mission{
+  margin: 150px 0;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__info{
+    max-width: 720px;
+    margin-top: 50px;
+  }
+  &__info-title{
+    @extend %title;
+    margin-bottom: 20px;
+  }
+  &__info-text{
+    color: #828A99;
+    margin-bottom: 15px;
+  }
+  &__info-box{
+    display: flex;
+    column-gap: 50px;
+    margin-top: 30px;
+  }
+  &__info-item{
+    padding-left: 50px;
+    margin-bottom: 20px;
+    position: relative;
+    &::before{
+      content: '';
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      top: 0;
+      left: 0;
+    }
+  }
+  &__info-item--car::before{
+    background-image: url('../images/content/about/car.svg');
+  }
+  &__info-item--home::before{
+    background-image: url('../images/content/about/home.svg');
+  }
+  &__info-item--dis::before{
+    background-image: url('../images/content/about/dis.svg');
+  }
+  &__info-item--aerozol::before{
+    background-image: url('../images/content/about/aerozol.svg');
+  }
+  &__info-item--cosmetic::before{
+    background-image: url('../images/content/about/cosmetic.svg');
+  }
+  &__info-item--brush::before{
+    background-image: url('../images/content/about/brush.svg');
+  }
+}
+
+.center{
+  margin: 150px 0 240px;
+  &__title{
+    @extend %title;
+    margin-bottom: 20px;
+    max-width: 600px;
+  }
+  &__box{
+    display: flex;
+    column-gap: 100px;
+    margin-bottom: 50px;
+  }
+  &__text{
+    max-width: 635px;
+    color: #828A99;
+  }
+}
+
+.center-slide{
+  &__item{
+    max-width: 705px;
+    height: 400px;
+    img{
+      max-width: 705px;
+      height: 400px;
+      object-fit: cover;
+    }
+  }
+  .slick-prev{
+    right: 310px;
+  }
+  .slick-next{
+    right: 230px;
   }
 }
 
