@@ -1043,5 +1043,46 @@
   }
 }
 
+#contract-page{
+  .contract{
+    margin: 150px 0 100px;
+  }
+}
+
+.contract-descr{
+  margin: 100px 0 225px;
+  &__title{
+    @extend %notosans-400;
+    display: block;
+    margin-bottom: 10px;
+  }
+  &__text{
+    color: #828A99;
+    margin-bottom: 20px;
+  }
+  &__link{
+    @extend %notosans-600;
+    color: #5C8EE5;
+    padding-left: 39px;
+    position: relative;
+    &::before{
+      content: '';
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      top: 0;
+      left: 0;
+      background-image: url('../images/icons/load.svg');
+      transition: all 0.3s ease-out;
+    }
+    &:hover{
+      color: #5C8EE5;
+      &::before{
+        transform: rotate(90deg);
+      }
+    }
+  }
+}
+
 
 @import 'media';
