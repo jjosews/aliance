@@ -649,34 +649,34 @@
     }
   }
   &__list-item--him::before{
-    background-image: url('../images/content/partner/him.svg');
+    background-image: url('../images/icons/him.svg');
   }
   &__list-item--car::before{
-    background-image: url('../images/content/partner/car.svg');
+    background-image: url('../images/icons/car.svg');
   }
   &__list-item--eat::before{
-    background-image: url('../images/content/partner/eat.svg');
+    background-image: url('../images/icons/eat.svg');
   }
   &__list-item--brush::before{
-    background-image: url('../images/content/partner/brush.svg');
+    background-image: url('../images/icons/brush.svg');
   }
   &__list-item--cosmetic::before{
-    background-image: url('../images/content/partner/cosmetic.svg');
+    background-image: url('../images/icons/cosmetic.svg');
   }
   &__list-item--car-cosm::before{
-    background-image: url('../images/content/partner/car-cosm.svg');
+    background-image: url('../images/icons/car-cosm.svg');
   }
   &__list-item--shirt::before{
-    background-image: url('../images/content/partner/shirt.svg');
+    background-image: url('../images/icons/shirt.svg');
   }
   &__list-item--boots::before{
-    background-image: url('../images/content/partner/boots.svg');
+    background-image: url('../images/icons/boots.svg');
   }
   &__list-item--bricks::before{
-    background-image: url('../images/content/partner/bricks.svg');
+    background-image: url('../images/icons/bricks.svg');
   }
   &__list-item--more::before{
-    background-image: url('../images/content/partner/more.svg');
+    background-image: url('../images/icons/more.svg');
   }
   &__items{
     display: grid;
@@ -912,12 +912,26 @@
 
 .top{
   background-color: #F0F2F5;
-  padding: 50px 0;
   margin-top: -1px;
   &__title{
     display: block;
     @extend %top-title;
     margin-bottom: 20px;
+  }
+  &__inner{
+    padding: 50px 0;
+  }
+  &__inner--product-agtech{
+    position: relative;
+    &::after{
+      content: '';
+      position: absolute;
+      width: 480px;
+      height: 240px;
+      bottom: 0;
+      right: 0;
+      background-image: url('../images/avto-him.png');
+    }
   }
 }
 
@@ -988,22 +1002,22 @@
     }
   }
   &__info-item--car::before{
-    background-image: url('../images/content/about/car.svg');
+    background-image: url('../images/icons/car.svg');
   }
   &__info-item--home::before{
-    background-image: url('../images/content/about/home.svg');
+    background-image: url('../images/icons/home.svg');
   }
   &__info-item--dis::before{
-    background-image: url('../images/content/about/dis.svg');
+    background-image: url('../images/icons/dis.svg');
   }
   &__info-item--aerozol::before{
-    background-image: url('../images/content/about/aerozol.svg');
+    background-image: url('../images/icons/aerozol.svg');
   }
   &__info-item--cosmetic::before{
-    background-image: url('../images/content/about/cosmetic.svg');
+    background-image: url('../images/icons/cosmetic.svg');
   }
   &__info-item--brush::before{
-    background-image: url('../images/content/about/brush.svg');
+    background-image: url('../images/icons/brush.svg');
   }
 }
 
@@ -1080,6 +1094,117 @@
       &::before{
         transform: rotate(90deg);
       }
+    }
+  }
+}
+
+.avtohim-mission{
+  margin: 100px 0;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__info{
+    max-width: 720px;
+  }
+  &__info-title{
+    @extend %title;
+    margin-bottom: 20px;
+  }
+  &__info-text{
+    color: #828A99;
+    margin-bottom: 20px;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+}
+
+.avtohim-iccons{
+  margin: 100px 0;
+  .header-content__items{
+    border: 1px solid #EBEBF0;
+  }
+  .header-content__item + .header-content__item{
+    border-left: 1px solid #EBEBF0;
+  }
+}
+
+.avtohim{
+  margin: 150px 0;
+  background-image: url('../images/content/avtohim/avtohim.jpg');
+  background-repeat: no-repeat;
+  background-position: right center;
+  &__inner{
+    max-width: 720px;
+    padding-top: 50px;
+  }
+  &__title{
+    @extend %title;
+  }
+  &__text{
+    color: #828A99;
+    margin-bottom: 30px;
+  }
+  &__wrapper{
+    display: flex;
+    column-gap: 50px;
+  }
+  &__item{
+    padding-left: 44px;
+    margin-bottom: 20px;
+    position: relative;
+    &::before{
+      content: '';
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      top: 0;
+      left: 0;
+    }
+  }
+  &__item--him::before{
+    background-image: url('../images/content/avtohim/him.svg');
+  }
+  &__item--car::before{
+    background-image: url('../images/content/avtohim/car.svg');
+  }
+  &__item--varnish::before{
+    background-image: url('../images/content/avtohim/varnish.svg');
+  }
+}
+
+.himlist{
+  margin: 150px 0;
+  &__title{
+    @extend %title;
+    margin-bottom: 20px;
+  }
+  &__text{
+    color: #828A99;
+    margin-bottom: 50px;
+  }
+  &__box{
+    display: flex;
+    column-gap: 56px;
+  }
+  &__list{
+    width: 304px;
+  }
+  &__item{
+    padding-left: 36px;
+    margin-bottom: 20px;
+    max-width: 268px;
+    position: relative;
+    &::before{
+      content: '';
+      position: absolute;
+      width: 16px;
+      height: 2px;
+      top: 12px;
+      left: 0;
+      background-color: #5C8EE5;
     }
   }
 }
