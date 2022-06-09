@@ -64,3 +64,36 @@ body {
     }
   }
 }
+
+.pagination{
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 20px;
+  &__list{
+    display: flex;
+    align-items: center;
+  }
+  &__item{
+    & + .pagination__item{
+    margin-left: 35px;
+    }
+  }
+  &__item--active{
+    .pagination__item-link{
+      color: #5C8EE5;
+      display: inline-block;
+      padding: 12px 20px;
+      border: 1px solid #5C8EE5;
+      &:hover{
+        color: #5C8EE5;
+      }
+    }
+  }
+  &__item-link{
+    @extend %notosans-600;
+    color: $text;
+    &:hover{
+      color: $text;
+    }
+  }
+}
