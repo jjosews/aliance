@@ -280,6 +280,7 @@
 }
 
 .header-scroll{
+  z-index: 100;
   .dropdown:hover .dropbtn::after{
     top: 49px;
   }
@@ -1325,6 +1326,124 @@
 
 .partner-agtech{
   margin: 150px 0 225px;
+}
+
+.contact{
+  margin: 100px 0;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__phone{
+    @extend %notosans-600;
+    font-size: 32px;
+    line-height: 30px;
+    color: $text;
+    border-bottom: 2px solid $text;
+    &:hover{
+      color: $text;
+    }
+  }
+  &__address{
+    font-style: normal;
+    padding-left: 34px;
+    position: relative;
+    &::before{
+      content: '';
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      top: 0;
+      left: 0;
+      background-image: url('../images/icons/mark.svg');
+    }
+  }
+  &__email{
+    color: $text;
+    padding-left: 34px;
+    position: relative;
+    &::before{
+      content: '';
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      top: 0;
+      left: 0;
+      background-image: url('../images/icons/mail.svg');
+    }
+    &:hover{
+      color: $text;
+    }
+  }
+  &__socials{
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+  }
+  &__socials-link{
+    path{
+      transition: all .3s;
+    }
+    &:hover{
+      path{
+        fill: #3A71D1;
+      }
+    }
+  }
+}
+
+.map{
+  margin: 100px 0 225px;
+}
+
+#map{
+  width: 100%;
+  height: 600px;
+}
+
+.politic{
+  margin: 100px 0 150px;
+  &__text{
+    margin-bottom: 20px;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+}
+
+.page-404{
+  text-align: center;
+  margin: 150px 0;
+  &__error{
+    @extend %bebas-400;
+    color: #5C8EE5;
+    font-size: 300px;
+    line-height: 300px;
+  }
+  &__box{
+    max-width: 480px;
+    margin: 0 auto;
+  }
+  &__title{
+    font-size: 28px;
+    line-height: 44px;
+  }
+  &__text{
+    margin: 20px 0 30px;
+  }
+  &__link{
+    padding: 25px 60px;
+    background-color: #5C8EE5;
+    color: #fff;
+    @extend %notosans-600;
+    display: inline-block;
+    transition: all .3s;
+    &:hover{
+      color: #fff;
+      background-color: #3A71D1;
+    }
+  }
 }
 
 
