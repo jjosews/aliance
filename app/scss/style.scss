@@ -917,6 +917,9 @@
     display: block;
     @extend %top-title;
     margin-bottom: 20px;
+    span{
+      font-weight: 600;
+    }
   }
   &__inner{
     padding: 50px 0;
@@ -1211,6 +1214,117 @@
 
 .mark-section--own-product{
   margin: 100px 0 225px;
+}
+
+.agtech-mission{
+  margin: 100px 0;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__info{
+    max-width: 720px;
+  }
+  &__title{
+    @extend %title;
+    margin-bottom: 20px;
+  }
+  &__text{
+    color: #828A99;
+    margin-bottom: 20px;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+}
+
+.agtech-iccons{
+  margin: 100px 0;
+  .header-content__items{
+    border: 1px solid #EBEBF0;
+  }
+  .header-content__item + .header-content__item{
+    border-left: 1px solid #EBEBF0;
+  }
+}
+
+.agtech-info{
+  margin: 150px 0;
+  background-color: #F0F2F5;
+  background-image: url('../images/agtech-info-bg.png');
+  background-repeat: no-repeat;
+  background-position: 110% bottom;
+  &__inner{
+    max-width: 720px;
+    padding: 100px 0;
+  }
+  &__title{
+    @extend %title;
+    margin-bottom: 20px;
+  }
+  &__text{
+    color: #828A99;
+    margin-bottom: 30px;
+    max-width: 660px;
+  }
+  &__box{
+    display: flex;
+    column-gap: 100px;
+    margin-bottom: 50px;
+  }
+  &__item{
+    padding-left: 44px;
+    margin-bottom: 20px;
+    position: relative;
+    &::before{
+      content: '';
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      top: 0;
+      left: 0;
+    }
+  }
+  &__item--him::before{
+    background-image: url('../images/content/avtohim/him.svg');
+  }
+  &__item--car::before{
+    background-image: url('../images/content/avtohim/car.svg');
+  }
+  &__item--varnish::before{
+    background-image: url('../images/content/avtohim/varnish.svg');
+  }
+  &__link{
+    width: 289px;
+    height: 76px;
+    background-color: #5C8EE5;
+    color: #fff;
+    @extend %notosans-600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 34px;
+    transition: all .3s;
+    position: relative;
+    &::before{
+      content: '';
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      top: 26px;
+      left: 60px;
+      background-image: url('../images/icons/download.svg');
+    }
+    &:hover{
+      background-color: #3A71D1;
+      color: #fff;
+    }
+  }
+}
+
+.partner-agtech{
+  margin: 150px 0 225px;
 }
 
 
